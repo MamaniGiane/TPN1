@@ -1,6 +1,7 @@
 package ar.edu.unju.fi.ejercicio6;
 
 import java.time.LocalDate;
+
 import java.util.Scanner;
 
 import ar.edu.unju.fi.ejercicio6.model.persona;
@@ -10,10 +11,10 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Scanner scanner = new Scanner(system.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		// Construccion de un objeto persona utilizando el constructor por defecto
-		persona persona1 = new Persona();
+		persona persona1 = new persona();
 		System.out.println("Datos de la primera persona: ");
 		persona1.mostrarDatos();
 		
@@ -24,10 +25,10 @@ public class main {
 		String nombre = scanner.next();
 		System.out.println("Fecha de nacimiento: ");
 		String fechaNac = scanner.next();
-		LocalDate fechaNac = LocalDate.parse(fechaNac);
+		LocalDate fechaNac1 = LocalDate.parse(fechaNac1);
 		System.out.println("Provincia: ");
 		String provincia = scanner.next();
-		persona persona2 = new Persona(dni, nombre, fechaNac, provincia);
+		persona persona2 = new persona(dni, nombre, fechaNac1, provincia);
 		System.out.println("Datos de la segunda persona: ");
 		persona2.mostrarDatos();
 		
@@ -37,9 +38,9 @@ public class main {
 		System.out.println("ingrese el nombre: ");
 		nombre = scanner.next();
 		System.out.println("Fecha de nacimiento: ");
-		fechaNac = scanner.next();
-		fechaNac = LocalDate.parse(fechaNac);
-		persona persona3 = new Persona(dni, nombre, fechaNac);
+		fechaNac1 = scanner.next();
+		fechaNac1 = LocalDate.parse(fechaNac1);
+		persona persona3 = new persona();
 		System.out.println("Datos de la tercera persona: ");
 		persona3.mostrarDatos();;
 		

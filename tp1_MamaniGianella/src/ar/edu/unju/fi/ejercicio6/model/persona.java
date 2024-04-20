@@ -6,16 +6,16 @@ import java.time.Period;
 public class persona {
 	
 	private int dni;
-	private string nombre;
+	private String nombre;
 	private LocalDate fechaNac;
-	private string provincia;
+	private String provincia;
 	
 	
 	public persona () {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public persona (int dni, string nombre, LocalDate fechaNac, string provincia) {
+	public persona (int dni, String nombre, LocalDate fechaNac, String provincia) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -23,7 +23,7 @@ public class persona {
 		this.provincia =provincia;
 	}
 
-	public persona(int dni, string nombre, LocalDate fechaNac, string provincia) {
+	public persona(int dni, String nombre, LocalDate fechaNac) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -39,11 +39,11 @@ public class persona {
 		this.dni = dni;
 	}
 
-	public string getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(string nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
@@ -55,22 +55,22 @@ public class persona {
 		this.fechaNac = fechaNac;
 	}
 
-	public string getProvincia() {
+	public String getProvincia() {
 		return provincia;
 	}
 
-	public void setProvincia(string provincia) {
+	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
 
-	public int calcularEdad () {
+	public Period calcularEdad () {
 		LocalDate fechaactual = LocalDate.now();
 		Period periodo = Period.between(this.fechaNac,  fechaactual);
 		return periodo;
 	}
 	
-	public boolean mayordeEdad () {
-		return calcularedad() >= 18;
+	public boolean mayordeEdad1 () {
+		return calcularEdad() >= 18;
 	}
 
 	public void mostrarDatos() {
@@ -79,9 +79,9 @@ public class persona {
 		System.out.println("Fecha de Nacimiento: " + fechaNac);
 		System.out.println("Edad: " + calcularEdad());
 		System.out.println("Provincia: " + provincia);
-	}
 	
-	if( mayordeEdad()) {
+	
+	if(void mayordeEdad()) {
 		System.out.println("La persona es mayor de edad");
 	} else {
 		System.out.println("La persona es menor de edad");
