@@ -4,15 +4,15 @@ import java.time.LocalDate;
 
 public class jugador {
 
-	private String nombre;
-	private String apellido;
-	private LocalDate fechaNac;
-	private String nacionalidad;
-	private double estatura;
-	private double peso;
-	private String posicion;
+	private static String nombre;
+	private static String apellido;
+	private static LocalDate fechaNac;
+	private static String nacionalidad;
+	private static double estatura;
+	private static double peso;
+	private static String posicion;
 	
-	public String getPosicion() {
+	public static String getPosicion() {
 		return posicion;
 	}
 	public void setPosicion(String posicion) {
@@ -37,44 +37,44 @@ public class jugador {
 		this.posicion = posicion;
 	}
 	
-	public String getNombre() {
+	public static String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getApellido() {
+	public static String getApellido() {
 		return apellido;
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	public LocalDate getFechaNac() {
+	public static LocalDate getFechaNac() {
 		return fechaNac;
 	}
 	public void setFechaNac(LocalDate fechaNac) {
 		this.fechaNac = fechaNac;
 	}
-	public String getNacionalidad() {
+	public static String getNacionalidad() {
 		return nacionalidad;
 	}
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
-	public double getEstatura() {
+	public static double getEstatura() {
 		return estatura;
 	}
 	public void setEstatura(double estatura) {
 		this.estatura = estatura;
 	}
-	public double getPeso() {
+	public static double getPeso() {
 		return peso;
 	}
 	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 	
-	public void calcularEdad() {
+	public static int calcularEdad() {
 		LocalDate fechaActual = LocalDate.now();
 		int anios = fechaActual.getYear() - fechaNac.getYear();
 		int meses = fechaActual.getMonthValue() - fechaNac.getMonthValue();
@@ -83,7 +83,7 @@ public class jugador {
 		if(meses < 0 || (meses == 0 && dias < 0)) {
 			anios--;
 		}
-		return;
+		return anios;
 	}
 	
 	public String toString() {
